@@ -24,7 +24,6 @@
 /* USER CODE BEGIN Includes */
 #include "software_timer.h"
 #include "ex1.h"
-#include "ex2.h"
 #include "ex4.h"
 /* USER CODE END Includes */
 
