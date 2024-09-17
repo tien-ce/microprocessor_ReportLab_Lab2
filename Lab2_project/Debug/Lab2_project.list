@@ -76,17 +76,17 @@ Disassembly of section .text:
  8000144:	20000020 	.word	0x20000020
  8000148:	080021c4 	.word	0x080021c4
 
-0800014c <ex3_init>:
+0800014c <ex4_init>:
  *  Created on: Sep 14, 2024
  *      Author: thuyh
  */
-#include "ex3.h"
+#include "ex4.h"
 int state  ;
-void ex3_init(){
+void ex4_init(){
  800014c:	b480      	push	{r7}
  800014e:	af00      	add	r7, sp, #0
 	state = 0;
- 8000150:	4b03      	ldr	r3, [pc, #12]	; (8000160 <ex3_init+0x14>)
+ 8000150:	4b03      	ldr	r3, [pc, #12]	; (8000160 <ex4_init+0x14>)
  8000152:	2200      	movs	r2, #0
  8000154:	601a      	str	r2, [r3, #0]
 
@@ -98,39 +98,39 @@ void ex3_init(){
  800015e:	bf00      	nop
  8000160:	20000038 	.word	0x20000038
 
-08000164 <ex3_run>:
-void ex3_run(){
+08000164 <ex4_run>:
+void ex4_run(){
  8000164:	b580      	push	{r7, lr}
  8000166:	af00      	add	r7, sp, #0
 	if(state >=4){
- 8000168:	4b0d      	ldr	r3, [pc, #52]	; (80001a0 <ex3_run+0x3c>)
+ 8000168:	4b0d      	ldr	r3, [pc, #52]	; (80001a0 <ex4_run+0x3c>)
  800016a:	681b      	ldr	r3, [r3, #0]
  800016c:	2b03      	cmp	r3, #3
- 800016e:	dd02      	ble.n	8000176 <ex3_run+0x12>
+ 800016e:	dd02      	ble.n	8000176 <ex4_run+0x12>
 		state = 0;
- 8000170:	4b0b      	ldr	r3, [pc, #44]	; (80001a0 <ex3_run+0x3c>)
+ 8000170:	4b0b      	ldr	r3, [pc, #44]	; (80001a0 <ex4_run+0x3c>)
  8000172:	2200      	movs	r2, #0
  8000174:	601a      	str	r2, [r3, #0]
 	}
 	if(timer1_flag[1] == 1){
- 8000176:	4b0b      	ldr	r3, [pc, #44]	; (80001a4 <ex3_run+0x40>)
+ 8000176:	4b0b      	ldr	r3, [pc, #44]	; (80001a4 <ex4_run+0x40>)
  8000178:	685b      	ldr	r3, [r3, #4]
  800017a:	2b01      	cmp	r3, #1
- 800017c:	d10d      	bne.n	800019a <ex3_run+0x36>
+ 800017c:	d10d      	bne.n	800019a <ex4_run+0x36>
 		update7SEG(state);
- 800017e:	4b08      	ldr	r3, [pc, #32]	; (80001a0 <ex3_run+0x3c>)
+ 800017e:	4b08      	ldr	r3, [pc, #32]	; (80001a0 <ex4_run+0x3c>)
  8000180:	681b      	ldr	r3, [r3, #0]
  8000182:	4618      	mov	r0, r3
  8000184:	f000 f810 	bl	80001a8 <update7SEG>
-		setTimer1(1,50);
- 8000188:	2132      	movs	r1, #50	; 0x32
+		setTimer1(1,25);
+ 8000188:	2119      	movs	r1, #25
  800018a:	2001      	movs	r0, #1
  800018c:	f001 ffa6 	bl	80020dc <setTimer1>
 		state ++;
- 8000190:	4b03      	ldr	r3, [pc, #12]	; (80001a0 <ex3_run+0x3c>)
+ 8000190:	4b03      	ldr	r3, [pc, #12]	; (80001a0 <ex4_run+0x3c>)
  8000192:	681b      	ldr	r3, [r3, #0]
  8000194:	3301      	adds	r3, #1
- 8000196:	4a02      	ldr	r2, [pc, #8]	; (80001a0 <ex3_run+0x3c>)
+ 8000196:	4a02      	ldr	r2, [pc, #8]	; (80001a0 <ex4_run+0x3c>)
  8000198:	6013      	str	r3, [r2, #0]
 	}
 }
@@ -344,12 +344,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  ex3_init();
- 80002fa:	f7ff ff27 	bl	800014c <ex3_init>
+  ex4_init();
+ 80002fa:	f7ff ff27 	bl	800014c <ex4_init>
   while (1)
   {
-  ex3_run();
- 80002fe:	f7ff ff31 	bl	8000164 <ex3_run>
+  ex4_run();
+ 80002fe:	f7ff ff31 	bl	8000164 <ex4_run>
  8000302:	e7fc      	b.n	80002fe <main+0x1e>
  8000304:	2000003c 	.word	0x2000003c
 

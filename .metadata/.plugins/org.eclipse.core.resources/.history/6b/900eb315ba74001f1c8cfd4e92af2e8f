@@ -9,23 +9,23 @@ void DISPLAY_LED_7_SEGMENT(GPIO_TypeDef* GPIOx,uint16_t LED_7_0,uint16_t LED_7_1
 		,uint16_t LED_7_5,uint16_t LED_7_6 ,uint8_t digit){
 		switch(digit){
 			case 0:
-							HAL_GPIO_WritePin(GPIOx, LED_7_0, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_1, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_2, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_3, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_4, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_5, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_6, SET);
-					break;
+			HAL_GPIO_WritePin(GPIOx, LED_7_0, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_1, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_2, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_3, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_4, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_5, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_6, SET);
+				break;
 			case 1:
-							HAL_GPIO_WritePin(GPIOx, LED_7_0, SET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_1, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_2, RESET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_3, SET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_4, SET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_5, SET);
-							HAL_GPIO_WritePin(GPIOx, LED_7_6, SET);
-					break;
+			HAL_GPIO_WritePin(GPIOx, LED_7_0, SET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_1, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_2, RESET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_3, SET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_4, SET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_5, SET);
+			HAL_GPIO_WritePin(GPIOx, LED_7_6, SET);
+				break;
 			case 2:
 							HAL_GPIO_WritePin(GPIOx, LED_7_0, RESET);
 							HAL_GPIO_WritePin(GPIOx, LED_7_1, RESET);
@@ -34,7 +34,7 @@ void DISPLAY_LED_7_SEGMENT(GPIO_TypeDef* GPIOx,uint16_t LED_7_0,uint16_t LED_7_1
 							HAL_GPIO_WritePin(GPIOx, LED_7_4, RESET);
 							HAL_GPIO_WritePin(GPIOx, LED_7_5, SET);
 							HAL_GPIO_WritePin(GPIOx, LED_7_6, RESET);
-				    break;
+				break;
 			case 3:
 							HAL_GPIO_WritePin(GPIOx, LED_7_0, RESET);
 							HAL_GPIO_WritePin(GPIOx, LED_7_1, RESET);

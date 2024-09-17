@@ -126,10 +126,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  ex4_init();
+  ex3_init();
   while (1)
   {
-  ex4_run();
+  ex3_run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
