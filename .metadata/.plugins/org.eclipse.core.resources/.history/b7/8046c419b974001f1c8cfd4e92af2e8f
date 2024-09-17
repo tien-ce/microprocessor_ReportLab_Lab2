@@ -25,7 +25,6 @@
 #include "software_timer.h"
 #include "ex1.h"
 #include "ex2.h"
-#include "ex3.h"
 #include "ex4.h"
 /* USER CODE END Includes */
 
@@ -126,10 +125,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  ex3_init();
+  ex2_init();
   while (1)
   {
-  ex3_run();
+  ex2_run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
