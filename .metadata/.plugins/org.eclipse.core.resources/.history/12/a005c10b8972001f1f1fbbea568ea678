@@ -1,0 +1,25 @@
+/*
+ * ex1.c
+ *
+ *  Created on: Sep 14, 2024
+ *      Author: thuyh
+ */
+#include "ex1.h"
+void ex1_init(){
+	HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, SET);
+	HAL_GPIO_WritePin(GPIOA,EN1_PIN, RESET);
+	HAL_GPIO_WritePin(GPIOA,EN2_PIN, SET);
+	setTimer1(100);
+
+}
+int num = 1;
+void ex1_run(){
+	if(timer1_flag==1){
+		setTimer1(100);
+		HAL_GPIO_TogglePin(GPIOA, LED_RED_Pin);
+		HAL_GPIO_TogglePin(GPIOA, EN1_PIN);
+		HAL_GPIO_TogglePin(GPIOA, EN2_PIN);
+		DISPLAY_LED_7_SEGMENT(GPIOB, SEG0, SEG1, SEG2, SEG3, SEG4, SEG5, SEG6, num);
+		num=3-num;
+	}
+}
