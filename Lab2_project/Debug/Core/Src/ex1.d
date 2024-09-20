@@ -23,8 +23,7 @@ Core/Src/ex1.o: ../Core/Src/ex1.c ../Core/Inc/ex1.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- E:/microprocessor_ReportLab2/SOW/Ins/software_timer.h ../Core/Inc/main.h \
- E:/microprocessor_ReportLab2/SOW/Ins/LED7_SEGMENT.h
+ E:/SOW/Ins/software_timer.h ../Core/Inc/main.h E:/SOW/Ins/LED7_SEGMENT.h
 
 ../Core/Inc/ex1.h:
 
@@ -78,8 +77,8 @@ Core/Src/ex1.o: ../Core/Src/ex1.c ../Core/Inc/ex1.h ../Core/Inc/main.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
-E:/microprocessor_ReportLab2/SOW/Ins/software_timer.h:
+E:/SOW/Ins/software_timer.h:
 
 ../Core/Inc/main.h:
 
-E:/microprocessor_ReportLab2/SOW/Ins/LED7_SEGMENT.h:
+E:/SOW/Ins/LED7_SEGMENT.h:
