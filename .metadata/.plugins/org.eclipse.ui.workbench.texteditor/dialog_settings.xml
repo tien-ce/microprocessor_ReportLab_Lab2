@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="led_index"/>
 			<item value="index"/>
 			<item value="state"/>
 			<item value="hour`"/>
@@ -24,6 +25,7 @@
 		</list>
 		<list key="replacehistory">
 			<item value="index_led"/>
+			<item value="led_index"/>
 			<item value="4"/>
 		</list>
 	</section>
