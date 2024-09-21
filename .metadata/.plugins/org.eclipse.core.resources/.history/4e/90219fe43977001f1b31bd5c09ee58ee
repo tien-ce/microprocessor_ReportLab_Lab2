@@ -1,0 +1,44 @@
+/*
+ * ex7.h
+ *
+ *  Created on: Sep 20, 2024
+ *      Author: thuyh
+ */
+
+#ifndef INC_EX7_H_
+#define INC_EX7_H_
+
+
+
+#endif /* INC_EX7_H_ */
+#include "main.h"
+#include "software_timer.h"
+ void update7SEG ( int index_led ) {
+ switch ( index_led ) {
+ case 0:
+	 SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 1);
+	 DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, led_buffer[0]);
+ // Display the first 7 SEG with led_buffer [0]
+ break ;
+ case 1:
+ // Display the second 7 SEG with led_buffer [1]
+	 SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 2);
+	 DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, led_buffer[1]);
+ break ;
+ case 2:
+ // Display the third 7 SEG with led_buffer [2]
+	 SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 3);
+	 DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, led_buffer[2]);
+ break ;
+ case 3:
+	 SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 4);
+	 DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, led_buffer[3]);
+ // Display the forth 7 SEG with led_buffer [3]
+ break ;
+ default :
+ break ;
+ }
+ }
+extern int hour, minute, second,index_led,state;
+void ex7_init();
+void ex7_run();

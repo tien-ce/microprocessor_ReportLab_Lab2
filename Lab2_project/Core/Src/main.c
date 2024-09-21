@@ -27,6 +27,7 @@
 #include "ex2.h"
 #include "ex3.h"
 #include "ex4.h"
+#include "ex7.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,8 +62,6 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 const int MAX_LED = 4;
- int hour = 15 , minute = 8 , second = 50;
- int index_led = 0;
  int led_buffer [4] = {1 , 2 , 3 , 4};
  void update7SEG ( int index ) {
  switch ( index ) {
@@ -96,7 +95,6 @@ const int MAX_LED = 4;
 	led_buffer[2] = minute / 10;
 	led_buffer[3] = minute % 10;
  }
-
 /* USER CODE END 0 */
 
 /**
@@ -134,31 +132,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int index = 0 ;
+  ex7_init();
   while (1)
   {
-	  if(timer1_flag[1]==1){
-	  		  if(index >=4){
-	  			  index=0;
-	  		  }
-	  		  setTimer1(1, 25);
-	  		  update7SEG(index);
-	  		  index ++;
-	  	  }
-	  	  second ++;
-	  	 if ( second >= 60) {
-	  	  second = 0;
-	  	  minute ++;
-	  	  }
-	  	  if( minute >= 60) {
-	  	  minute = 0;
-	  	  hour ++;
-	  	  }
-	  	  if( hour >=24) {
-	  	  hour = 0;
-	  	  }
-	  	  updateClockBuffer () ;
-	  	  HAL_Delay (1000) ;
+  ex7_run();
 	      /* USER CODE END WHILE */
 
 	      /* USER CODE BEGIN 3 */
