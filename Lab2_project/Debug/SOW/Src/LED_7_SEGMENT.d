@@ -1,6 +1,5 @@
-SOW/Src/LED_7_SEGMENT.o: \
- E:/microprocessor_ReportLab2/SOW/Src/LED_7_SEGMENT.c \
- E:/microprocessor_ReportLab2/SOW/Ins/LED7_SEGMENT.h ../Core/Inc/main.h \
+SOW/Src/LED_7_SEGMENT.o: E:/SOW/Src/LED_7_SEGMENT.c \
+ E:/SOW/Ins/LED7_SEGMENT.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -26,7 +25,7 @@ SOW/Src/LED_7_SEGMENT.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 
-E:/microprocessor_ReportLab2/SOW/Ins/LED7_SEGMENT.h:
+E:/SOW/Ins/LED7_SEGMENT.h:
 
 ../Core/Inc/main.h:
 
