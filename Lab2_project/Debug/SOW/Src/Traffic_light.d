@@ -1,6 +1,5 @@
-SOW/Src/Traffic_light.o: \
- E:/microprocessor_ReportLab2/SOW/Src/Traffic_light.c \
- E:/microprocessor_ReportLab2/SOW/Ins/Traffic_light.h ../Core/Inc/main.h \
+SOW/Src/Traffic_light.o: E:/SOW/Src/Traffic_light.c \
+ E:/SOW/Ins/Traffic_light.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -26,7 +25,7 @@ SOW/Src/Traffic_light.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 
-E:/microprocessor_ReportLab2/SOW/Ins/Traffic_light.h:
+E:/SOW/Ins/Traffic_light.h:
 
 ../Core/Inc/main.h:
 

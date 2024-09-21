@@ -11,8 +11,6 @@ void ex1_init(){
 	HAL_GPIO_WritePin(GPIOA, LED_RED_Pin, SET);
 	HAL_GPIO_WritePin(GPIOA,EN1_Pin, RESET);
 	HAL_GPIO_WritePin(GPIOA,EN2_Pin, SET);
-	HAL_GPIO_WritePin(GPIOA,EN3_Pin, SET);
-	HAL_GPIO_WritePin(GPIOA,EN4_Pin, SET);
 	DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, num);
 	setTimer1(0,1000);
 }

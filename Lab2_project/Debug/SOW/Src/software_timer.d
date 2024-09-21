@@ -1,6 +1,5 @@
-SOW/Src/software_timer.o: \
- E:/microprocessor_ReportLab2/SOW/Src/software_timer.c \
- E:/microprocessor_ReportLab2/SOW/Ins/software_timer.h ../Core/Inc/main.h \
+SOW/Src/software_timer.o: E:/SOW/Src/software_timer.c \
+ E:/SOW/Ins/software_timer.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -26,7 +25,7 @@ SOW/Src/software_timer.o: \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 
-E:/microprocessor_ReportLab2/SOW/Ins/software_timer.h:
+E:/SOW/Ins/software_timer.h:
 
 ../Core/Inc/main.h:
 

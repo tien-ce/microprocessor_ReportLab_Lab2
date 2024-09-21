@@ -1,5 +1,4 @@
-SOW/Src/LED.o: E:/microprocessor_ReportLab2/SOW/Src/LED.c \
- E:/microprocessor_ReportLab2/SOW/Ins/LED.h ../Core/Inc/main.h \
+SOW/Src/LED.o: E:/SOW/Src/LED.c E:/SOW/Ins/LED.h ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -25,7 +24,7 @@ SOW/Src/LED.o: E:/microprocessor_ReportLab2/SOW/Src/LED.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 
-E:/microprocessor_ReportLab2/SOW/Ins/LED.h:
+E:/SOW/Ins/LED.h:
 
 ../Core/Inc/main.h:
 
