@@ -37,13 +37,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00001637  00000000  00000000  0002b858  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000aa21  00000000  00000000  0002ce8f  2**0
+ 17 .debug_line   0000aa23  00000000  00000000  0002ce8f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000820b8  00000000  00000000  000378b0  2**0
+ 18 .debug_str    000820b8  00000000  00000000  000378b2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b9968  2**0
+ 19 .comment      00000053  00000000  00000000  000b996a  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002700  00000000  00000000  000b99bc  2**2
+ 20 .debug_frame  00002700  00000000  00000000  000b99c0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -95,32 +95,32 @@ void ex2_init(){
  800015a:	2110      	movs	r1, #16
  800015c:	4814      	ldr	r0, [pc, #80]	; (80001b0 <ex2_init+0x64>)
  800015e:	f000 fd79 	bl	8000c54 <HAL_GPIO_WritePin>
-	SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 1);
- 8000162:	2301      	movs	r3, #1
- 8000164:	9301      	str	r3, [sp, #4]
- 8000166:	f44f 7300 	mov.w	r3, #512	; 0x200
- 800016a:	9300      	str	r3, [sp, #0]
- 800016c:	f44f 7380 	mov.w	r3, #256	; 0x100
- 8000170:	2280      	movs	r2, #128	; 0x80
- 8000172:	2140      	movs	r1, #64	; 0x40
- 8000174:	480e      	ldr	r0, [pc, #56]	; (80001b0 <ex2_init+0x64>)
- 8000176:	f001 ff5f 	bl	8002038 <SET_EN_7_SEGMENT>
 	DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, 1);
- 800017a:	2301      	movs	r3, #1
- 800017c:	9304      	str	r3, [sp, #16]
- 800017e:	2340      	movs	r3, #64	; 0x40
- 8000180:	9303      	str	r3, [sp, #12]
- 8000182:	2320      	movs	r3, #32
- 8000184:	9302      	str	r3, [sp, #8]
- 8000186:	2310      	movs	r3, #16
- 8000188:	9301      	str	r3, [sp, #4]
- 800018a:	2308      	movs	r3, #8
- 800018c:	9300      	str	r3, [sp, #0]
- 800018e:	2304      	movs	r3, #4
- 8000190:	2202      	movs	r2, #2
- 8000192:	2101      	movs	r1, #1
- 8000194:	4807      	ldr	r0, [pc, #28]	; (80001b4 <ex2_init+0x68>)
- 8000196:	f001 fd47 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+ 8000162:	2301      	movs	r3, #1
+ 8000164:	9304      	str	r3, [sp, #16]
+ 8000166:	2340      	movs	r3, #64	; 0x40
+ 8000168:	9303      	str	r3, [sp, #12]
+ 800016a:	2320      	movs	r3, #32
+ 800016c:	9302      	str	r3, [sp, #8]
+ 800016e:	2310      	movs	r3, #16
+ 8000170:	9301      	str	r3, [sp, #4]
+ 8000172:	2308      	movs	r3, #8
+ 8000174:	9300      	str	r3, [sp, #0]
+ 8000176:	2304      	movs	r3, #4
+ 8000178:	2202      	movs	r2, #2
+ 800017a:	2101      	movs	r1, #1
+ 800017c:	480d      	ldr	r0, [pc, #52]	; (80001b4 <ex2_init+0x68>)
+ 800017e:	f001 fd53 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+	SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 1);
+ 8000182:	2301      	movs	r3, #1
+ 8000184:	9301      	str	r3, [sp, #4]
+ 8000186:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 800018a:	9300      	str	r3, [sp, #0]
+ 800018c:	f44f 7380 	mov.w	r3, #256	; 0x100
+ 8000190:	2280      	movs	r2, #128	; 0x80
+ 8000192:	2140      	movs	r1, #64	; 0x40
+ 8000194:	4806      	ldr	r0, [pc, #24]	; (80001b0 <ex2_init+0x64>)
+ 8000196:	f001 ff4f 	bl	8002038 <SET_EN_7_SEGMENT>
 	setTimer1(1,500);
  800019a:	f44f 71fa 	mov.w	r1, #500	; 0x1f4
  800019e:	2001      	movs	r0, #1
@@ -166,135 +166,135 @@ void ex2_run(){
  80001f4:	0800027d 	.word	0x0800027d
  80001f8:	080002bd 	.word	0x080002bd
 		case 1:
-			state = 2;
- 80001fc:	4b44      	ldr	r3, [pc, #272]	; (8000310 <ex2_run+0x158>)
- 80001fe:	2202      	movs	r2, #2
- 8000200:	601a      	str	r2, [r3, #0]
-			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 2);
- 8000202:	2302      	movs	r3, #2
- 8000204:	9301      	str	r3, [sp, #4]
- 8000206:	f44f 7300 	mov.w	r3, #512	; 0x200
- 800020a:	9300      	str	r3, [sp, #0]
- 800020c:	f44f 7380 	mov.w	r3, #256	; 0x100
- 8000210:	2280      	movs	r2, #128	; 0x80
- 8000212:	2140      	movs	r1, #64	; 0x40
- 8000214:	483d      	ldr	r0, [pc, #244]	; (800030c <ex2_run+0x154>)
- 8000216:	f001 ff0f 	bl	8002038 <SET_EN_7_SEGMENT>
 			DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, 2);
- 800021a:	2302      	movs	r3, #2
- 800021c:	9304      	str	r3, [sp, #16]
- 800021e:	2340      	movs	r3, #64	; 0x40
- 8000220:	9303      	str	r3, [sp, #12]
- 8000222:	2320      	movs	r3, #32
- 8000224:	9302      	str	r3, [sp, #8]
- 8000226:	2310      	movs	r3, #16
- 8000228:	9301      	str	r3, [sp, #4]
- 800022a:	2308      	movs	r3, #8
- 800022c:	9300      	str	r3, [sp, #0]
- 800022e:	2304      	movs	r3, #4
- 8000230:	2202      	movs	r2, #2
- 8000232:	2101      	movs	r1, #1
- 8000234:	4837      	ldr	r0, [pc, #220]	; (8000314 <ex2_run+0x15c>)
- 8000236:	f001 fcf7 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+ 80001fc:	2302      	movs	r3, #2
+ 80001fe:	9304      	str	r3, [sp, #16]
+ 8000200:	2340      	movs	r3, #64	; 0x40
+ 8000202:	9303      	str	r3, [sp, #12]
+ 8000204:	2320      	movs	r3, #32
+ 8000206:	9302      	str	r3, [sp, #8]
+ 8000208:	2310      	movs	r3, #16
+ 800020a:	9301      	str	r3, [sp, #4]
+ 800020c:	2308      	movs	r3, #8
+ 800020e:	9300      	str	r3, [sp, #0]
+ 8000210:	2304      	movs	r3, #4
+ 8000212:	2202      	movs	r2, #2
+ 8000214:	2101      	movs	r1, #1
+ 8000216:	483f      	ldr	r0, [pc, #252]	; (8000314 <ex2_run+0x15c>)
+ 8000218:	f001 fd06 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 2);
+ 800021c:	2302      	movs	r3, #2
+ 800021e:	9301      	str	r3, [sp, #4]
+ 8000220:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8000224:	9300      	str	r3, [sp, #0]
+ 8000226:	f44f 7380 	mov.w	r3, #256	; 0x100
+ 800022a:	2280      	movs	r2, #128	; 0x80
+ 800022c:	2140      	movs	r1, #64	; 0x40
+ 800022e:	4837      	ldr	r0, [pc, #220]	; (800030c <ex2_run+0x154>)
+ 8000230:	f001 ff02 	bl	8002038 <SET_EN_7_SEGMENT>
+			state = 2;
+ 8000234:	4b36      	ldr	r3, [pc, #216]	; (8000310 <ex2_run+0x158>)
+ 8000236:	2202      	movs	r2, #2
+ 8000238:	601a      	str	r2, [r3, #0]
 			break;
  800023a:	e062      	b.n	8000302 <ex2_run+0x14a>
 		case 2:
-			state = 3;
- 800023c:	4b34      	ldr	r3, [pc, #208]	; (8000310 <ex2_run+0x158>)
- 800023e:	2203      	movs	r2, #3
- 8000240:	601a      	str	r2, [r3, #0]
-			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 3);
- 8000242:	2303      	movs	r3, #3
- 8000244:	9301      	str	r3, [sp, #4]
- 8000246:	f44f 7300 	mov.w	r3, #512	; 0x200
- 800024a:	9300      	str	r3, [sp, #0]
- 800024c:	f44f 7380 	mov.w	r3, #256	; 0x100
- 8000250:	2280      	movs	r2, #128	; 0x80
- 8000252:	2140      	movs	r1, #64	; 0x40
- 8000254:	482d      	ldr	r0, [pc, #180]	; (800030c <ex2_run+0x154>)
- 8000256:	f001 feef 	bl	8002038 <SET_EN_7_SEGMENT>
 			DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, 3);
- 800025a:	2303      	movs	r3, #3
- 800025c:	9304      	str	r3, [sp, #16]
- 800025e:	2340      	movs	r3, #64	; 0x40
- 8000260:	9303      	str	r3, [sp, #12]
- 8000262:	2320      	movs	r3, #32
- 8000264:	9302      	str	r3, [sp, #8]
- 8000266:	2310      	movs	r3, #16
- 8000268:	9301      	str	r3, [sp, #4]
- 800026a:	2308      	movs	r3, #8
- 800026c:	9300      	str	r3, [sp, #0]
- 800026e:	2304      	movs	r3, #4
- 8000270:	2202      	movs	r2, #2
- 8000272:	2101      	movs	r1, #1
- 8000274:	4827      	ldr	r0, [pc, #156]	; (8000314 <ex2_run+0x15c>)
- 8000276:	f001 fcd7 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+ 800023c:	2303      	movs	r3, #3
+ 800023e:	9304      	str	r3, [sp, #16]
+ 8000240:	2340      	movs	r3, #64	; 0x40
+ 8000242:	9303      	str	r3, [sp, #12]
+ 8000244:	2320      	movs	r3, #32
+ 8000246:	9302      	str	r3, [sp, #8]
+ 8000248:	2310      	movs	r3, #16
+ 800024a:	9301      	str	r3, [sp, #4]
+ 800024c:	2308      	movs	r3, #8
+ 800024e:	9300      	str	r3, [sp, #0]
+ 8000250:	2304      	movs	r3, #4
+ 8000252:	2202      	movs	r2, #2
+ 8000254:	2101      	movs	r1, #1
+ 8000256:	482f      	ldr	r0, [pc, #188]	; (8000314 <ex2_run+0x15c>)
+ 8000258:	f001 fce6 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 3);
+ 800025c:	2303      	movs	r3, #3
+ 800025e:	9301      	str	r3, [sp, #4]
+ 8000260:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 8000264:	9300      	str	r3, [sp, #0]
+ 8000266:	f44f 7380 	mov.w	r3, #256	; 0x100
+ 800026a:	2280      	movs	r2, #128	; 0x80
+ 800026c:	2140      	movs	r1, #64	; 0x40
+ 800026e:	4827      	ldr	r0, [pc, #156]	; (800030c <ex2_run+0x154>)
+ 8000270:	f001 fee2 	bl	8002038 <SET_EN_7_SEGMENT>
+			state = 3;
+ 8000274:	4b26      	ldr	r3, [pc, #152]	; (8000310 <ex2_run+0x158>)
+ 8000276:	2203      	movs	r2, #3
+ 8000278:	601a      	str	r2, [r3, #0]
 			break;
  800027a:	e042      	b.n	8000302 <ex2_run+0x14a>
 		case 3:
-			state = 4;
- 800027c:	4b24      	ldr	r3, [pc, #144]	; (8000310 <ex2_run+0x158>)
- 800027e:	2204      	movs	r2, #4
- 8000280:	601a      	str	r2, [r3, #0]
-			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 4);
- 8000282:	2304      	movs	r3, #4
- 8000284:	9301      	str	r3, [sp, #4]
- 8000286:	f44f 7300 	mov.w	r3, #512	; 0x200
- 800028a:	9300      	str	r3, [sp, #0]
- 800028c:	f44f 7380 	mov.w	r3, #256	; 0x100
- 8000290:	2280      	movs	r2, #128	; 0x80
- 8000292:	2140      	movs	r1, #64	; 0x40
- 8000294:	481d      	ldr	r0, [pc, #116]	; (800030c <ex2_run+0x154>)
- 8000296:	f001 fecf 	bl	8002038 <SET_EN_7_SEGMENT>
 			DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, 0);
- 800029a:	2300      	movs	r3, #0
- 800029c:	9304      	str	r3, [sp, #16]
- 800029e:	2340      	movs	r3, #64	; 0x40
- 80002a0:	9303      	str	r3, [sp, #12]
- 80002a2:	2320      	movs	r3, #32
- 80002a4:	9302      	str	r3, [sp, #8]
- 80002a6:	2310      	movs	r3, #16
- 80002a8:	9301      	str	r3, [sp, #4]
- 80002aa:	2308      	movs	r3, #8
- 80002ac:	9300      	str	r3, [sp, #0]
- 80002ae:	2304      	movs	r3, #4
- 80002b0:	2202      	movs	r2, #2
- 80002b2:	2101      	movs	r1, #1
- 80002b4:	4817      	ldr	r0, [pc, #92]	; (8000314 <ex2_run+0x15c>)
- 80002b6:	f001 fcb7 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+ 800027c:	2300      	movs	r3, #0
+ 800027e:	9304      	str	r3, [sp, #16]
+ 8000280:	2340      	movs	r3, #64	; 0x40
+ 8000282:	9303      	str	r3, [sp, #12]
+ 8000284:	2320      	movs	r3, #32
+ 8000286:	9302      	str	r3, [sp, #8]
+ 8000288:	2310      	movs	r3, #16
+ 800028a:	9301      	str	r3, [sp, #4]
+ 800028c:	2308      	movs	r3, #8
+ 800028e:	9300      	str	r3, [sp, #0]
+ 8000290:	2304      	movs	r3, #4
+ 8000292:	2202      	movs	r2, #2
+ 8000294:	2101      	movs	r1, #1
+ 8000296:	481f      	ldr	r0, [pc, #124]	; (8000314 <ex2_run+0x15c>)
+ 8000298:	f001 fcc6 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 4);
+ 800029c:	2304      	movs	r3, #4
+ 800029e:	9301      	str	r3, [sp, #4]
+ 80002a0:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 80002a4:	9300      	str	r3, [sp, #0]
+ 80002a6:	f44f 7380 	mov.w	r3, #256	; 0x100
+ 80002aa:	2280      	movs	r2, #128	; 0x80
+ 80002ac:	2140      	movs	r1, #64	; 0x40
+ 80002ae:	4817      	ldr	r0, [pc, #92]	; (800030c <ex2_run+0x154>)
+ 80002b0:	f001 fec2 	bl	8002038 <SET_EN_7_SEGMENT>
+			state = 4;
+ 80002b4:	4b16      	ldr	r3, [pc, #88]	; (8000310 <ex2_run+0x158>)
+ 80002b6:	2204      	movs	r2, #4
+ 80002b8:	601a      	str	r2, [r3, #0]
 			break;
  80002ba:	e022      	b.n	8000302 <ex2_run+0x14a>
 		case 4:
-			state = 1;
- 80002bc:	4b14      	ldr	r3, [pc, #80]	; (8000310 <ex2_run+0x158>)
- 80002be:	2201      	movs	r2, #1
- 80002c0:	601a      	str	r2, [r3, #0]
-			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 1);
- 80002c2:	2301      	movs	r3, #1
- 80002c4:	9301      	str	r3, [sp, #4]
- 80002c6:	f44f 7300 	mov.w	r3, #512	; 0x200
- 80002ca:	9300      	str	r3, [sp, #0]
- 80002cc:	f44f 7380 	mov.w	r3, #256	; 0x100
- 80002d0:	2280      	movs	r2, #128	; 0x80
- 80002d2:	2140      	movs	r1, #64	; 0x40
- 80002d4:	480d      	ldr	r0, [pc, #52]	; (800030c <ex2_run+0x154>)
- 80002d6:	f001 feaf 	bl	8002038 <SET_EN_7_SEGMENT>
 			DISPLAY_LED_7_SEGMENT(GPIOB, SEG0_Pin, SEG1_Pin, SEG2_Pin, SEG3_Pin, SEG4_Pin, SEG5_Pin, SEG6_Pin, 1);
- 80002da:	2301      	movs	r3, #1
- 80002dc:	9304      	str	r3, [sp, #16]
- 80002de:	2340      	movs	r3, #64	; 0x40
- 80002e0:	9303      	str	r3, [sp, #12]
- 80002e2:	2320      	movs	r3, #32
- 80002e4:	9302      	str	r3, [sp, #8]
- 80002e6:	2310      	movs	r3, #16
- 80002e8:	9301      	str	r3, [sp, #4]
- 80002ea:	2308      	movs	r3, #8
- 80002ec:	9300      	str	r3, [sp, #0]
- 80002ee:	2304      	movs	r3, #4
- 80002f0:	2202      	movs	r2, #2
- 80002f2:	2101      	movs	r1, #1
- 80002f4:	4807      	ldr	r0, [pc, #28]	; (8000314 <ex2_run+0x15c>)
- 80002f6:	f001 fc97 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+ 80002bc:	2301      	movs	r3, #1
+ 80002be:	9304      	str	r3, [sp, #16]
+ 80002c0:	2340      	movs	r3, #64	; 0x40
+ 80002c2:	9303      	str	r3, [sp, #12]
+ 80002c4:	2320      	movs	r3, #32
+ 80002c6:	9302      	str	r3, [sp, #8]
+ 80002c8:	2310      	movs	r3, #16
+ 80002ca:	9301      	str	r3, [sp, #4]
+ 80002cc:	2308      	movs	r3, #8
+ 80002ce:	9300      	str	r3, [sp, #0]
+ 80002d0:	2304      	movs	r3, #4
+ 80002d2:	2202      	movs	r2, #2
+ 80002d4:	2101      	movs	r1, #1
+ 80002d6:	480f      	ldr	r0, [pc, #60]	; (8000314 <ex2_run+0x15c>)
+ 80002d8:	f001 fca6 	bl	8001c28 <DISPLAY_LED_7_SEGMENT>
+			SET_EN_7_SEGMENT(GPIOA, EN1_Pin, EN2_Pin, EN3_Pin, EN4_Pin, 1);
+ 80002dc:	2301      	movs	r3, #1
+ 80002de:	9301      	str	r3, [sp, #4]
+ 80002e0:	f44f 7300 	mov.w	r3, #512	; 0x200
+ 80002e4:	9300      	str	r3, [sp, #0]
+ 80002e6:	f44f 7380 	mov.w	r3, #256	; 0x100
+ 80002ea:	2280      	movs	r2, #128	; 0x80
+ 80002ec:	2140      	movs	r1, #64	; 0x40
+ 80002ee:	4807      	ldr	r0, [pc, #28]	; (800030c <ex2_run+0x154>)
+ 80002f0:	f001 fea2 	bl	8002038 <SET_EN_7_SEGMENT>
+			state = 1;
+ 80002f4:	4b06      	ldr	r3, [pc, #24]	; (8000310 <ex2_run+0x158>)
+ 80002f6:	2201      	movs	r2, #1
+ 80002f8:	601a      	str	r2, [r3, #0]
 			break;
  80002fa:	e002      	b.n	8000302 <ex2_run+0x14a>
 		default:
