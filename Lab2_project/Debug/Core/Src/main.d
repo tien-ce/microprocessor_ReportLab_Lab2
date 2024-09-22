@@ -25,7 +25,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  E:/SOW/Ins/software_timer.h ../Core/Inc/ex1.h ../Core/Inc/main.h \
  E:/SOW/Ins/LED7_SEGMENT.h ../Core/Inc/ex2.h ../Core/Inc/ex3.h \
- ../Core/Inc/ex4.h ../Core/Inc/ex7.h E:/SOW/Ins/LED.h
+ ../Core/Inc/ex4.h ../Core/Inc/ex7.h E:/SOW/Ins/LED.h ../Core/Inc/ex9.h \
+ E:/SOW/Ins/matrix8x8_led.h
 
 ../Core/Inc/main.h:
 
@@ -94,3 +95,7 @@ E:/SOW/Ins/LED7_SEGMENT.h:
 ../Core/Inc/ex7.h:
 
 E:/SOW/Ins/LED.h:
+
+../Core/Inc/ex9.h:
+
+E:/SOW/Ins/matrix8x8_led.h:

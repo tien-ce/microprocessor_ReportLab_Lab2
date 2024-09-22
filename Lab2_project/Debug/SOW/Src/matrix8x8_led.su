@@ -1,0 +1,2 @@
+matrix8x8_led.c:13:6:updateColLEDMatrix	24	static
+matrix8x8_led.c:100:6:updateRowLEDMatrix	32	static
