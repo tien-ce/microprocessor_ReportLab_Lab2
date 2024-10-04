@@ -20,7 +20,7 @@ void ex8_run(){
 		  			  index_led=0;
 		  		  }
 		  		  setTimer1(1, 250);
-		  		update7SEG(index_led);
+		  		  update8SEG(index_led);
 		  		  index_led ++;
 		  	  }
 

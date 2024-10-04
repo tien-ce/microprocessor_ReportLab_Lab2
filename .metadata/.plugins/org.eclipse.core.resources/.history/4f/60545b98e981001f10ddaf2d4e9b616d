@@ -25,7 +25,6 @@
 #include "software_timer.h"
 #include "ex1.h"
 #include "ex2.h"
-#include "ex3.h"
 #include "ex4.h"
 #include "ex8.h"
 /* USER CODE END Includes */
@@ -62,6 +61,7 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 const int MAX_LED = 4;
+ int index_led = 0;
  int led_buffer [4] = {1 , 2 , 3 , 4};
  void update7SEG ( int index ) {
  switch ( index ) {
@@ -88,12 +88,6 @@ const int MAX_LED = 4;
  default :
  break ;
  }
- }
- void updateClockBuffer(){
-	led_buffer[0] = hour / 10;
-	led_buffer[1] = hour % 10;
-	led_buffer[2] = minute / 10;
-	led_buffer[3] = minute % 10;
  }
 /* USER CODE END 0 */
 
@@ -136,9 +130,6 @@ int main(void)
   while (1)
   {
   ex8_run();
-	      /* USER CODE END WHILE */
-
-	      /* USER CODE BEGIN 3 */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
