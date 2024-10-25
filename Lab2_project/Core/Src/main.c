@@ -133,14 +133,9 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   ex8_init();
-  setTimer1(3, 1000);
   while (1)
   {
   ex8_run();
-  if(timer1_flag[2] == 1){
-	  HAL_GPIO_TogglePin(GPIOA, DOT_Pin);
-	  setTimer1(3, 1000);
-  }
 	      /* USER CODE END WHILE */
 
 	      /* USER CODE BEGIN 3 */
