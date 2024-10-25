@@ -10,6 +10,7 @@
 #ifndef INC_EX3_H_
 #define INC_EX3_H_
 extern int state ;
+void update7SEG ( int index );
 void ex3_init();
 void ex3_run();
 #endif /* INC_EX3_H_ */

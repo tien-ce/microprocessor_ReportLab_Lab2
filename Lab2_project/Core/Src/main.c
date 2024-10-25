@@ -62,7 +62,7 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 const int MAX_LED = 4;
- int led_buffer [4] = {1 , 2 , 3 , 4};
+int led_buffer [4] = {1 , 2 , 3 , 4};
  void update7SEG ( int index ) {
  switch ( index ) {
  case 0:
