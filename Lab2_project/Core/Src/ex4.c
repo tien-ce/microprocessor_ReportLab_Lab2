@@ -1,3 +1,4 @@
+
 /*
  * ex4.c
  *
@@ -16,7 +17,7 @@ void ex4_run(){
 	}
 	if(timer1_flag[1] == 1){
 		update7SEG(state);
-		setTimer1(1,250);
+		setTimer1(1,25);
 		state ++;
 	}
 }

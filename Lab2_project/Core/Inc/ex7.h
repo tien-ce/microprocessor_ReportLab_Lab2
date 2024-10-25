@@ -16,6 +16,7 @@
 #include "LED.h"
 extern int hour , minute , second;
 extern int index_led;
-
+void update7SEG ( int index );
+void updateClockBuffer();
 void ex7_init();
 void ex7_run();

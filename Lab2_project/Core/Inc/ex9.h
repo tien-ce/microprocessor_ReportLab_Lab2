@@ -11,6 +11,7 @@
 #include "software_timer.h"
 #include "matrix8x8_led.h"
 extern int index_col ;
+void updateLEDMatrix (int index );
 void ex9_init();
 void ex9_run();
 #endif /* INC_EX9_H_ */
